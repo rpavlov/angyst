@@ -13,14 +13,26 @@
 
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+  	<title>GYST</title>
   	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
-
+  <div class="contain-to-grid sticky">
+    <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name"><h4>Gyst</h4></li>
+      </ul>
+    </nav>
+  </div>
   <body>
+    <div clas="row">
+      <form>
+        <input type="text" ng-model="newGoalset.title"></input>
+      </form>
+      <div>{{newGoalset.title}}</div>
+    </div>
     <%= yield %>
   </body>
 
