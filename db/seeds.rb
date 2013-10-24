@@ -1,0 +1,5 @@
+Goalset.create!(title:"Exercise", target_date:DateTime.now, complete:false)
+Goalset.create!(title:"Read", target_date:DateTime.now, complete:false)
+Goalset.create!(title:"Lollygag", target_date:DateTime.now, complete:true)
+Goalset.create!(title:"Jazzercise", target_date:DateTime.now, complete:false)
+Goalset.create!(title:"Loaf", target_date:DateTime.now, complete:true)

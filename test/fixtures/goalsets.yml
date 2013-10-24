@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  complete: false
+  target_date: 2013-10-24 18:59:40
+
+two:
+  title: MyString
+  complete: false
+  target_date: 2013-10-24 18:59:40

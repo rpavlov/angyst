@@ -1,0 +1,19 @@
+common: &common
+  adapter: postgresql
+  encoding: utf8
+  database: angyst
+
+development:
+  <<: *common
+  database: angyst
+  username: rpavlov
+  password: aya
+
+test:
+  <<: *common
+  database: angyst-test
+  username: rpavlov
+  password: aya
+
+production:
+  <<: *common
