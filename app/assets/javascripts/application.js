@@ -14,7 +14,10 @@
 //= require jquery_ujs
 //= require angular
 //= require angular-resource
+//= require angular-ui-router
+//= require ng-rails-csrf
 //= require foundation
+//= require gyst
 //= require_tree .
 
 $(function(){ $(document).foundation(); });

@@ -1,0 +1,20 @@
+<div >
+	<div class="row new-goalset-container">
+		<form ng-submit="addGoalset()">
+	  	<input type="text" ng-model="newGoalset.title">
+	    <input type="submit" value="Add">
+	  </form>
+	</div>
+  <hr/>
+	<div class="row">
+		<div class="small-3 column">
+			<ul>
+				<li class="goalset-container" ng-repeat="goalset in goalsets">
+					<a ui-sref="goalsetList.goalset">{{ goalset.title }}</a>
+				</li>
+			</ul>
+		</div>
+		<div ui-view class="large-9 column">
+		</div>
+	</div>
+</div>

@@ -1,8 +1,10 @@
 Angyst::Application.routes.draw do
 
-  resources :tasks
-  resources :goalsets
-  root to: "goalsets#index"
+  root to: "main#index"
+
+  resources :goalsets do
+    resources :tasks
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

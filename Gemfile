@@ -7,7 +7,7 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 gem 'slim'
-
+gem 'ng-rails-csrf'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

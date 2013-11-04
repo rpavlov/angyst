@@ -4,7 +4,7 @@
 <!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="en" ng-app> <!--<![endif]-->
+<html lang="en" ng-app="Gyst"> <!--<![endif]-->
   <head>
   	<meta charset="utf-8" />
   	<!-- Uncomment to make IE8 render like IE7 -->
@@ -15,8 +15,8 @@
 
   	<title>GYST</title>
   	<%= stylesheet_link_tag    "application" %>
-  	<%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "vendor/custom.modernizr" %>
     <%= csrf_meta_tags %>
   </head>
   <div class="contain-to-grid sticky">
@@ -27,13 +27,8 @@
     </nav>
   </div>
   <body>
-    <div clas="row">
-      <form>
-        <input type="text" ng-model="newGoalset.title"></input>
-      </form>
-      <div>{{newGoalset.title}}</div>
+    <div ui-view>
+      <%= yield %>
     </div>
-    <%= yield %>
   </body>
-
 </html>
