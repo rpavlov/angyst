@@ -15,6 +15,8 @@
 //= require angular
 //= require angular-resource
 //= require angular-ui-router
+//= require underscore
+//= require restangular
 //= require ng-rails-csrf
 //= require foundation
 //= require gyst

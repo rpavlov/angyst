@@ -4,9 +4,13 @@
 #  ($scope, Goalset) -> $scope.goalset_tasks = Task.query({goalset_id: "@goalset_id", id: "@id"})]
 # )
 
-# appControllers.controller('GoalsetListCtrl', ['$scope', '$http','Goalset',
-# 	($scope,$http, Goalset) -> $scope.goalsets = Goalset.query()]
-# )
+appControllers.controller('GoalsetListCtrl', ['$scope', 'Restangular',
+	($scope,Restangular) ->
+
+
+		$scope.goalsets = Restangular.all('goalsets').getList()
+
+])
 
 # appControllers.controller('GoalsetListCtrl', ['$scope', '$http',
 # 	($scope,$http) -> $http.get("goalsets.json").success(($data)-> $scope.goalsets = data)
@@ -18,18 +22,15 @@
 # ]
 
 
-@GoalsetListCtrl = ["$scope", "Goalsets", ($scope, Goalsets) ->
-	$scope.goalsets = Goalsets.query()
+# @GoalsetListCtrl = ["$scope", "Restangular", ($scope, Restangular) ->
+# 	$scope.goalsets =  Restangular.all('goalsets');
 
-	$scope.addGoalset = ->
-		$scope.goalsets.push($scope.newGoalset)
-		$scope.newGoalset = {}
+# 	$scope.addGoalset = ->
+# 		$scope.goalsets.push($scope.newGoalset)
+# 		$scope.newGoalset = {}
+# ]
 
-	$scope.viewGoalset = ->
-    $location.url('/goalset')
-]
+# @GoalsetShowCtrl = ["$scope", "Goalset",($scope, Goalset) ->
+# 	$scope.goalset = Goalset.query()
 
-@GoalsetShowCtrl = ["$scope", "$stateParams",($scope, $stateParams) ->
-	$scope.goalset = $stateParams.goalset
-
-]
+# ]
