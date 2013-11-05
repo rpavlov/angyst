@@ -20,11 +20,10 @@ app.config(['$routeProvider',
         templateUrl:  'goalsets.html'
         controller: 'GoalsetListCtrl'
       }).
-      when('/goalsets/:id',{
+      when('/goalsets/:goalsetId',{
         templateUrl: 'goalsets.show.html',
         controller: 'GoalsetShowCtrl'
       }).
-
       otherwise({
         redirectTo: '/'
       })

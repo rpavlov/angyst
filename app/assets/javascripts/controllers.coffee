@@ -5,16 +5,12 @@
 # )
 
 appControllers.controller('GoalsetListCtrl', ['$scope', 'Restangular',
-	($scope,Restangular) ->
-
-
-		$scope.goalsets = Restangular.all('goalsets').getList()
-
+	($scope, Restangular) -> $scope.goalsets = Restangular.all('goalsets').getList()
 ])
 
-# appControllers.controller('GoalsetListCtrl', ['$scope', '$http',
-# 	($scope,$http) -> $http.get("goalsets.json").success(($data)-> $scope.goalsets = data)
-# ])
+appControllers.controller('GoalsetShowCtrl', ['$scope', '$routeParams','Restangular',
+	($scope, $routeParams, Restangular) -> $scope.goalset = Restangular.one('goalsets', $routeParams.goalsetId).get()
+])
 
 
 # @GoalsetsShowCtrl = ["$scope", "Goalset", ($scope, Goalset) ->
